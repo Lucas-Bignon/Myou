@@ -1,0 +1,9 @@
+Diagrame Use case
+Diagrame d'activité
+Diagrame Base de donné
+Diagrame d'empathie
+Diagrame Lean canvas
+Diagrame Story mapping
+Diagrame classe backend
+Diagrame classe frontend (Wavi)
+Diagrame méthode FAST
