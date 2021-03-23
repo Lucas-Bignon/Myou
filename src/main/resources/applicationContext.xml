@@ -1,0 +1,38 @@
+<!--
+ Commentaire Complet sur le contexte Application :
+
+    Il se situe dans le répertoire resources. Le repertoire ressources est lié au classpath e l'application
+ Il s'agit d un model que l'on retrouve tres souvent. On y retrouve la balise racines bean. Il
+ y a autant de beans que de classe a associer (controller, service, repository).
+ Un beans dispose d'une classe et elle doit contenir le nom entier y compris le package de réference.
+
+    Il va falloir mettre les composant en relation en injectant des dépendance on le fait avec une
+ balise property qui dispose d'un attribut name et la valeur de l attribut correspon a la propriété ou
+ on veut injecter notre dépendance. On a un attribut ref qui permet de contenir la reference du composant
+ a injecter.
+
+    On souhaite aussi instancier avec un Id disposer avant ou après notre classe pour l identifier avec le
+ nom quel on souhaite? On demance au contener léger de spring c'est d instancier la clas et dans son graph en mémoir
+ d indexer l objet avec l identifiant pour le mettre dans l attribut ref pour indiquer a spring
+ quel est l objet que je veux injecter.
+
+    Dans le service on a une referenc evers le repositroy et dans le controlleur o a une réference dans le service
+    dans le ref on identifie tj le service  se qui vas se passer concretement pour spring va essayer
+    d invoquer le setteur de la propriété, elle doit donc benificier d un setter dit java bean un composant
+    réutilisable.
+
+    Nous avons donc compris les bases des conteneurs léger et pour le deployer nous allons avoir besoin de
+    library
+ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.p2d.Myou.controller.HomeController">
+    <property name="">
+    </bean>
+    
+
+</beans>
