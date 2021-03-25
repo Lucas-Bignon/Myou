@@ -1,5 +1,6 @@
 package com.p2d.Myou;
 
+import com.p2d.Myou.controller.InvoiceController;
 import com.p2d.Myou.model.Invoice;
 import com.p2d.Myou.service.InvoiceService;
 import org.springframework.boot.SpringApplication;
@@ -11,14 +12,9 @@ import java.util.Scanner;
 public class MyouApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(MyouApplication.class, args);
-		System.out.println("Salut donne le nom client stp");
-		Scanner sc= new Scanner(System.in);
-		String customerName = sc.nextLine();
-		Invoice invoice = new Invoice();
-		invoice.setCustomerName(customerName);
-		InvoiceService invoiceService = new InvoiceService();
-		invoiceService.createInvoice(invoice);
+		SpringApplication.run(MyouApplication.class, args);
+		InvoiceController invoiceController = new InvoiceController();
+		invoiceController.createInvoiceUsingConsole();
 	}
 
 }
