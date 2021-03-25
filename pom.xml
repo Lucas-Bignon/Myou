@@ -71,6 +71,12 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Dependance spring_context-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.2.3.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
