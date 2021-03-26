@@ -9,6 +9,8 @@ import com.p2d.Myou.service.IInvoiceService;
 import com.p2d.Myou.service.NumberInvoiceService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
 
@@ -17,36 +19,8 @@ public class MyouApplication {
 	public static void main(String[] args) {
 
 		//SpringApplication.run(MyouApplication.class, args);
-
-		//J'uttilise un scanneur pour choisir mon type de configuration
-		Scanner sc= new Scanner(System.in);
-
-		// j'instancie les interfaces
-		IInvoiceController invoiceController;
-		IInvoiceRepository invoiceRepository=null;
-		IInvoiceService invoiceService;
-
-
-		// je leur dis qu'il sont nouveau
-		invoiceController = new KeyboardInvoiceController();
-		// je souhaite choisir une configuration en base de donné ou en mémoire
-		// Je lance mon scanneur
-		System.out.println("Tu préfère bosser en mémoire ou en base de donné ? (memory/database)");
-		String repositoryType = sc.nextLine();
-
-		switch (repositoryType){
-			case "database":
-				invoiceRepository = new DatabaseInvoiceRepository();
-				break;
-			case "memory":
-				invoiceRepository = new MemoryInvoiceRepository();
-				break;
-		}
-		invoiceService = new NumberInvoiceService();
-		// je peus commencer a m'amuser
-		invoiceController.setInvoiceService(invoiceService);
-		invoiceService.setInvoiceRepository(invoiceRepository);
-		// avec sa j'évite le nullpointer exeption parce que ct la galère
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		IInvoiceController invoiceController = context.getBean(IInvoiceController.class);
 		invoiceController.createInvoice();
 	}
 
