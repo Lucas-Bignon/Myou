@@ -8,14 +8,17 @@
 
     <context:annotation-config/>
     <context:property-placeholder location="classpath:application.properties"/>
-    <context:component-scan base-package="com.p2d.Myou"/>
+    <!-- <context:component-scan base-package="com.p2d.Myou.controller.Keyboard"/>
+    <context:component-scan base-package="com.p2d.Myou.repository.database"/>
+    <context:component-scan base-package="com.p2d.Myou.service.number"/> -->
 
-    <bean  class="com.p2d.Myou.controller.KeyboardInvoiceController">
+    <!--
+    <bean  class="com.p2d.Myou.controller.Keyboard.KeyboardInvoiceController">
     </bean>
 
-    <bean class="com.p2d.Myou.repository.DatabaseInvoiceRepository"/>
+    <bean class="com.p2d.Myou.repository.database.DatabaseInvoiceRepository"/>
 
-    <bean class="com.p2d.Myou.service.PrefixInvoiceService">
+    <bean class="com.p2d.Myou.service.prefix.PrefixInvoiceService">
     </bean>
-
+    -->
 </beans>

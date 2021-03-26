@@ -1,9 +1,15 @@
-package com.p2d.Myou.controller;
+package com.p2d.Myou.controller.Keyboard;
 
+import com.p2d.Myou.controller.IInvoiceController;
 import com.p2d.Myou.model.Invoice;
 import com.p2d.Myou.service.IInvoiceService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
 import java.util.Scanner;
 
+
+@Controller
 public class KeyboardInvoiceController implements IInvoiceController {
 
     public IInvoiceService getInvoiceService(){
@@ -13,6 +19,7 @@ public class KeyboardInvoiceController implements IInvoiceController {
         this.invoiceService = invoiceService;
     }
 
+    @Autowired
     private IInvoiceService invoiceService;
     public void createInvoice() {
         System.out.println("Salut donne le nom client stp");

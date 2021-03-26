@@ -1,10 +1,14 @@
-package com.p2d.Myou.repository;
+package com.p2d.Myou.repository.database;
 
 import com.p2d.Myou.model.Invoice;
+import com.p2d.Myou.repository.IInvoiceRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Repository
 public class DatabaseInvoiceRepository implements IInvoiceRepository
 {
     public void create(Invoice invoice) {

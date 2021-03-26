@@ -11,8 +11,9 @@ import java.util.List;
 
 @RestController
 public class ContactController {
+
 	@Autowired
-	ContactRepository repository;
+	private ContactRepository repository;
 
 	@GetMapping("/list")
 	public List<Contact> list(){
