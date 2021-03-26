@@ -3,12 +3,14 @@ package com.p2d.Myou.service.prefix;
 import com.p2d.Myou.model.Invoice;
 import com.p2d.Myou.repository.IInvoiceRepository;
 import com.p2d.Myou.service.IInvoiceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PrefixInvoiceService implements IInvoiceService {
 
+    @Autowired
     private IInvoiceRepository invoiceRepository;
 
     @Override

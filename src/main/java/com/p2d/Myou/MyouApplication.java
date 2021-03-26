@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 //@SpringBootApplication
 @Configuration
 @PropertySource("classpath:application.properties")
-@ComponentScan(basePackages = {"com.p2d.Myou.controller.Keyboard","com.p2d.Myou.repository.database","com.p2d.Myou.service.number"})
+@ComponentScan(basePackages = {"com.p2d.Myou.controller.Keyboard","com.p2d.Myou.repository.database"/*,"com.p2d.Myou.service.number"*/})
 public class MyouApplication {
 	public static void main(String[] args) {
 
