@@ -6,11 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-@Service
 public class NumberInvoiceService implements IInvoiceService {
 
     public static long lastNumber = 1L;
-    @Autowired
+
     private IInvoiceRepository invoiceRepository;
 
    public IInvoiceRepository getInvoiceRepository(){

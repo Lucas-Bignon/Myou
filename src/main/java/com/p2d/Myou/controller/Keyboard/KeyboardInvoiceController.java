@@ -12,15 +12,15 @@ import java.util.Scanner;
 @Controller
 public class KeyboardInvoiceController implements IInvoiceController {
 
+    @Autowired
+    private IInvoiceService invoiceService;
+
     public IInvoiceService getInvoiceService(){
         return invoiceService;
     }
     public void setInvoiceService(IInvoiceService invoiceService){
         this.invoiceService = invoiceService;
     }
-
-    @Autowired
-    private IInvoiceService invoiceService;
     public void createInvoice() {
         System.out.println("Salut donne le nom client stp");
         Scanner sc = new Scanner(System.in);

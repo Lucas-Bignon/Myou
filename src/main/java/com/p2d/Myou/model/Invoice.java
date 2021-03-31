@@ -1,6 +1,5 @@
 package com.p2d.Myou.model;
 
-import javax.persistence.Entity;
 
 
 public class Invoice {

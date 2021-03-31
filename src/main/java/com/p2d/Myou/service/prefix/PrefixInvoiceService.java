@@ -13,7 +13,6 @@ public class PrefixInvoiceService implements IInvoiceService {
     @Autowired
     private IInvoiceRepository invoiceRepository;
 
-    @Override
     public void setInvoiceRepository(IInvoiceRepository invoiceRepository) {
         this.invoiceRepository = invoiceRepository;
     }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Repository
+//@Repository
 public class DatabaseInvoiceRepository implements IInvoiceRepository
 {
     public void create(Invoice invoice) {
