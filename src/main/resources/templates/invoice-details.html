@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Myou</title>
+
+</head>
+<body>
+<span th:text="${#locale.country}"></span>
+    <h1>Votre facture</h1>
+<h2>facture n°</h2>
+<p>
+    Number : <span th:text="${invoice.number}"/>
+</p>
+<p>
+    name : <span th:text="${invoice.customerName}"/>
+</p>
+<p>
+    name : <span th:text="${invoice.orderNumber}"/>
+</p>
+    <script src="application.js"></script>
+</body>
+</html>

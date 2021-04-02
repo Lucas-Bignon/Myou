@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Myou</title>
+
+</head>
+<body>
+<span th:text="${#locale.country}"></span>
+    <h1>Test page templates</h1>
+<h2>Ajout facture</h2>
+<table>
+    <tr th:each="invoice: ${invoices}">
+        <td>
+            <a th:href="@{/myou/home/{number}(number=${invoice.number})}" th:text="${invoice.number}" test/>
+        </td>
+        <td th:text="${invoice.customerName}"> test</td>
+    </tr>
+</table>
+    <script src="../static/application.js"></script>
+</body>
+</html>

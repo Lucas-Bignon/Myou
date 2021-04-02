@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PrefixInvoiceService implements IInvoiceService {
 
@@ -50,5 +52,13 @@ public class PrefixInvoiceService implements IInvoiceService {
         invoiceRepository.create(invoice);
     }
 
+    public List<Invoice> getInvoiceList() {
 
+        return invoiceRepository.list();
+    }
+
+    @Override
+    public Invoice getInvoiceByNumber(String number) {
+        return invoiceRepository.getById(number);
+    }
 }

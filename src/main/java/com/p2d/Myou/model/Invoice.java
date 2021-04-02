@@ -5,6 +5,7 @@ package com.p2d.Myou.model;
 public class Invoice {
     private String number;
     private String CustomerName;
+    private String OrderNumber;
 
     public String getNumber() {
         return number;
@@ -20,5 +21,13 @@ public class Invoice {
 
     public void setCustomerName(String customerName) {
         CustomerName = customerName;
+    }
+
+    public String getOrderNumber() {
+        return OrderNumber;
+    }
+
+    public void setOrderNumber(String orderNumber) {
+        OrderNumber = orderNumber;
     }
 }

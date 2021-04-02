@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import java.util.Scanner;
 
 
-@Controller
+//@Controller
 public class KeyboardInvoiceController implements IInvoiceController {
 
     @Autowired
