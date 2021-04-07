@@ -1,8 +1,6 @@
 package com.p2d.Myou;
 
-import com.p2d.Myou.controller.IInvoiceController;
-import com.p2d.Myou.service.IInvoiceService;
-import com.p2d.Myou.service.prefix.PrefixInvoiceService;
+import com.p2d.Myou.controller.ICardController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +13,7 @@ public class Myou {
 		//SpringApplication.run(Myou.class, args);
 		//ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		//ApplicationContext context = new AnnotationConfigApplicationContext(Myou.class);
-		IInvoiceController invoiceController = context.getBean(IInvoiceController.class);
+		ICardController invoiceController = context.getBean(ICardController.class);
 		invoiceController.createInvoice();
 	}
 }

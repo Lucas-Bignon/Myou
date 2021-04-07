@@ -1,24 +1,11 @@
 const promise = fetch("https://pokeapi.co/api/v2/pokemon/1");
 // une promesse d execution propose deux parametre l un est effectuer et l autre résout un potentiel probelme
-const promise = new Promise(resolve, reject) =>{
+const promise2 = new Promise(resolve, reject) => {
     setTimeout(()=>{
         resolve("OK");
     }, 1000);
     resove = 42;
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 console.log(promise);
 

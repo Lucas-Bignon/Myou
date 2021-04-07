@@ -2,7 +2,7 @@ package com.p2d.Myou.model;
 
 
 
-public class Invoice {
+public class Card {
     private String number;
     private String CustomerName;
     private String OrderNumber;

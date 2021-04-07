@@ -1,8 +1,8 @@
 package com.p2d.Myou.service.prefix;
 
-import com.p2d.Myou.model.Invoice;
-import com.p2d.Myou.repository.IInvoiceRepository;
-import com.p2d.Myou.service.IInvoiceService;
+import com.p2d.Myou.model.Card;
+import com.p2d.Myou.repository.ICardRepository;
+import com.p2d.Myou.service.ICardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -10,12 +10,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PrefixInvoiceService implements IInvoiceService {
+public class PrefixCardService implements ICardService {
 
     @Autowired
-    private IInvoiceRepository invoiceRepository;
+    private ICardRepository invoiceRepository;
 
-    public void setInvoiceRepository(IInvoiceRepository invoiceRepository) {
+    public void setInvoiceRepository(ICardRepository invoiceRepository) {
         this.invoiceRepository = invoiceRepository;
     }
 
@@ -39,26 +39,26 @@ public class PrefixInvoiceService implements IInvoiceService {
     @Value("${invoice.prefix}")
     private String prefix;
 
-    public IInvoiceRepository getInvoiceRepository() {
+    public ICardRepository getInvoiceRepository() {
         return invoiceRepository;
     }
 
-    public void setInvoiceRespository(IInvoiceRepository invoiceRepository) {
+    public void setInvoiceRespository(ICardRepository invoiceRepository) {
         this.invoiceRepository = invoiceRepository;
     }
 
-    public void createInvoice(Invoice invoice) {
-        invoice.setNumber(prefix + (++lastNumber));
-        invoiceRepository.create(invoice);
+    public void createInvoice(Card card) {
+        card.setNumber(prefix + (++lastNumber));
+        invoiceRepository.create(card);
     }
 
-    public List<Invoice> getInvoiceList() {
+    public List<Card> getInvoiceList() {
 
         return invoiceRepository.list();
     }
 
     @Override
-    public Invoice getInvoiceByNumber(String number) {
+    public Card getInvoiceByNumber(String number) {
         return invoiceRepository.getById(number);
     }
 }
